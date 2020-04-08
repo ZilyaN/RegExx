@@ -21,6 +21,7 @@ class MainWindow : JFrame() {
     private val fieldFileName:JTextField
     private val fieldSearchString: JTextField
     private val btnFindEmail:JButton
+    private val fieldSubs: JTextField
     private val btnSubs:JButton
 
     init {
@@ -29,6 +30,7 @@ class MainWindow : JFrame() {
         textBlock = JEditorPane()
         fieldFileName = JTextField()
         fieldSearchString= JTextField()
+        fieldSubs = JTextField()
         fieldFileName.isEditable = false
         fieldFileName.background = Color.white
         btnFind = JButton()
@@ -130,9 +132,7 @@ class MainWindow : JFrame() {
                             GroupLayout.PREFERRED_SIZE
                         )
                         .addGap(4)
-                        .addGroup(
-                            gl.createSequentialGroup()
-                                .addGap(4)
+
                                 .addComponent(
                                     btnSubs,
                                     GroupLayout.PREFERRED_SIZE,
@@ -142,7 +142,7 @@ class MainWindow : JFrame() {
                                 .addGap(4)
                         )
                         .addGap(4)
-                ))
+                )
         gl.setVerticalGroup(
             gl.createSequentialGroup()
                 .addGap(4)
@@ -185,6 +185,7 @@ class MainWindow : JFrame() {
                 .addGap(4)
                 .addGroup(
                     gl.createParallelGroup()
+
                         .addComponent(
                             btnSubs,
                             GroupLayout.PREFERRED_SIZE,
@@ -239,13 +240,5 @@ class MainWindow : JFrame() {
             }
         }
     }
-
-    /*private fun subs (oldStr:String,newStr:String){
-        val rh = RegexHelper()
-        rh.regex = oldStr
-        var txt = textBlock.text
-        txt = txt.replace(oldStr,newStr)
-        val res = rh.findIn(txt)
-    }*/
 }
 
